@@ -1,0 +1,14 @@
+{
+  "include": ["src/ReactMoveSafeButton"],
+  "exclude": [
+    "**/*.test.*",
+    "**/*.cy.*"
+  ],
+  "compilerOptions": {
+    "rootDir": "./src/ReactMoveSafeButton",
+    "esModuleInterop": true,
+    "jsx": "react",
+    "declaration": true,
+    "moduleResolution": "node"
+  }
+}

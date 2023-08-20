@@ -1,5 +1,5 @@
 import { act, render, screen } from '@testing-library/react';
-import App, { ADDING_BUTTON_DURATION, START_BUTTON_LABEL, STOP_BUTTON_LABEL } from './App';
+import Demo, { ADDING_BUTTON_DURATION, START_BUTTON_LABEL, STOP_BUTTON_LABEL } from '.';
 
 /**
  * Move of DOMRect cannot be detected in React Testing Library as all the elements don't have non-zero size.
@@ -11,9 +11,9 @@ afterEach(() => {
   jest.useRealTimers()
 })
 
-describe('<App />', () => {
+describe('<Demo />', () => {
   test('renders start and stop button', () => {
-    render(<App />)
+    render(<Demo />)
     const startButton = screen.getByText(START_BUTTON_LABEL)
     expect(startButton).toBeInTheDocument()
     const clearButton = screen.getByText(STOP_BUTTON_LABEL)
@@ -22,7 +22,7 @@ describe('<App />', () => {
 
   test('adds buttons if start button is clicked', async () => {
     jest.useFakeTimers()
-    render(<App />)
+    render(<Demo />)
     act(() => screen.getByText(START_BUTTON_LABEL).click())
     act(() => jest.advanceTimersByTime(ADDING_BUTTON_DURATION))
     expect(await screen.findByText('0')).toBeInTheDocument()
@@ -30,7 +30,7 @@ describe('<App />', () => {
 
   test('clears buttons when stop button is clicked', async () => {
     jest.useFakeTimers()
-    render(<App />)
+    render(<Demo />)
     act(() => screen.getByText(START_BUTTON_LABEL).click())
     act(() => jest.advanceTimersByTime(ADDING_BUTTON_DURATION))
     expect(await screen.findByText('0')).toBeInTheDocument()

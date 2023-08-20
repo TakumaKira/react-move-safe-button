@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactMoveSafeButton from './ReactMoveSafeButton'
+import ReactMoveSafeButton from '../ReactMoveSafeButton'
 
 export const ADDING_BUTTON_DURATION = 3000
 export const START_BUTTON_LABEL = 'Start adding buttons'
 export const STOP_BUTTON_LABEL = 'Clear all buttons'
 
-function App() {
+function Demo() {
   const [ buttonList, setButtonList ] = React.useState<number[]>([])
   const [ isAddingNewButtons, setIsAddingNewButtons ] = React.useState(false)
   const intervalId = React.useRef<NodeJS.Timer>()
@@ -69,4 +69,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default Demo;
