@@ -1,6 +1,5 @@
 import React from "react"
-
-export type CustomButton = (ref: React.MutableRefObject<any>, disabled: boolean | undefined, buttonProps: React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>) => JSX.Element
+import { CustomButton } from "./types"
 
 export default function ReactMoveSafeButton({
   duration = 1000,

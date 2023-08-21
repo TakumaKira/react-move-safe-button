@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# React Move Safe Button
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## The motivation
 
-## Available Scripts
+It has been frustrating for me to mistakenly click a button which was sliding in the position of the button which I actually want to click. I figure out if the moved button was disabled for a second the user can just retry clicking without being distracted by unwanted action.
+Developers might be able to implement this functionality by themselves, but it's somewhat tedious and I've never seen such a button, so I decided to build this and publish for other developers.
+I chose React as the framework for this component because I'm a React developer and I believe it's most efficient to use most popular frontend framework to improve UX of many web applications all over the world.
+I aimed to make this as simple as possible along with offering flexibility which most developers require when applying this to their projects.
+Happy coding!
 
-In the project directory, you can run:
+## How to use
 
-### `npm start`
+You can learn how to use this component from [Demo app code](/src/Demo/index.tsx), [E2E test code](/src/ReactMoveSafeButton/index.cy.tsx) and JSDOC of the properties(you can check them out by hovering over props inside modern IDEs like VSCode).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## NPM commands
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `yarn` or `yarn install`
 
-### `npm test`
+Obviously you need to run this before running any other command.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `yarn start:demo`
 
-### `npm run build`
+Starts demo app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `yarn build`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Builds the component for publishing to NPM.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn build:demo`
 
-### `npm run eject`
+Builds demo app for deploying to hosting server.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `yarn test`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Runs all of main E2E tests and supplemental unit tests.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `yarn test:jest:dev`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Runs unit tests which watch the changes(Run this along with touching component's code).
 
-## Learn More
+### `CYPRESS_RECORD_KEY=<cypress-cloud-project-key> yarn test:cypress:ci`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs and upload the results to Cypress Cloud([Here](https://cloud.cypress.io/projects/vpgii8/) is mine).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `yarn test:cypress:open`
+
+Opens Cypress testing tools(Run this along with touching component's code).

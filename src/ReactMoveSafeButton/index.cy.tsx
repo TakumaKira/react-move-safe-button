@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 
 import React from 'react'
-import ReactMoveSafeButton, { CustomButton } from './index'
+import ReactMoveSafeButton from './index'
+import { CustomButton } from './types'
 
 /**
  * Move of DOMRect cannot be detected in React Testing Library as all the elements don't have non-zero size.
