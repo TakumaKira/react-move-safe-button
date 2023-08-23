@@ -8,6 +8,10 @@ I chose React as the framework for this component because I'm a React developer 
 I aimed to make this as simple as possible along with offering flexibility which most developers require when applying this to their projects.
 Happy coding!
 
+## Demo for developers
+
+You can try [here](https://codesandbox.io/s/react-move-safe-button-demo-3rjx6d)!
+
 ## How to use
 
 You can learn how to use this component from [Demo app code](/src/Demo/index.tsx), [E2E test code](/src/ReactMoveSafeButton/index.cy.tsx) and JSDOC of the properties(you can check them out by hovering over props inside modern IDEs like VSCode).
