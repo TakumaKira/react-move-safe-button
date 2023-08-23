@@ -3,9 +3,13 @@
 ## The motivation
 
 It has been frustrating for me to mistakenly click a button which was sliding in the position of the button which I actually want to click. I figure out if the moved button was disabled for a second the user can just retry clicking without being distracted by unwanted action.
+
 Developers might be able to implement this functionality by themselves, but it's somewhat tedious and I've never seen such a button, so I decided to build this and publish for other developers.
+
 I chose React as the framework for this component because I'm a React developer and I believe it's most efficient to use most popular frontend framework to improve UX of many web applications all over the world.
+
 I aimed to make this as simple as possible along with offering flexibility which most developers require when applying this to their projects.
+
 Happy coding!
 
 ## Demo for developers
